@@ -1,0 +1,58 @@
+{% extends "home/base.html" %}
+ {% block start %}
+     <style>
+        table,th,td{
+            border: 3px solid black;
+            border-collapse: collapse;
+            
+            
+        }
+        h1{
+            text-align: center;
+        }
+            h2{
+            text-align: center;
+        }
+
+    </style>
+
+    <h1>Today is a good day</h1>
+    <!-- <h2>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius placeat recusandae, quos iste nemo in enim aperiam at numquam aliquid sint facilis neque, dignissimos nihil laborum. Maiores aspernatur molestiae suscipit!</h2>
+    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eum hic, reiciendis distinctio voluptates esse temporibus neque illum facere perferendis, sequi quis voluptas maiores, natus adipisci dicta quae laboriosam ducimus repellat.</p> -->
+    
+    {% comment %} {{peoples}} {% endcomment %}
+     <table class='container'>
+        <tr>
+            <th>Sl. No.</th>
+            <th>Name</th>
+            <th>Age</th>
+            <th>can vote</th>
+        </tr>
+        {% for people in peoples %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{people.name}}</td>
+            <td>{{people.age}}</td>
+            <td {% if people.age >= 25 %} style = "background : red"{% endif %}>
+                {% if people.age >= 25 %}
+                👍
+                {% else %}
+                👎
+                {% endif %}
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <br>
+   {% comment %} <p>{{text | truncatechars:58}}</p> {% endcomment %}
+ <h2>
+        {% if 'cucumber' in vegetables %}
+        Yes Available
+        {% else %}
+        Not Available
+        {% endif %}
+    </h2>
+
+  {% endblock %}
+
