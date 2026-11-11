@@ -27,19 +27,8 @@ It provides a platform for managing cooking recipes by storing recipe informatio
 | Django | Backend web framework |
 | HTML | Web page structure |
 | CSS | Styling and presentation |
-| SQLite | Default Django database (if configured) |
 | Git | Version control |
 | GitHub | Repository hosting and collaboration |
-
-## Prerequisites
-
-Before installing the application, make sure you have the following:
-
-- Python 3.x
-- pip (Python package installer)
-- Git
-- Visual Studio Code or any suitable code editor
-- A modern web browser
 
 ## Installation
 
@@ -65,16 +54,8 @@ python -m venv myenv
 
 ### Step 4: Activate the virtual environment
 
-**For Windows:**
-
 ```bash
 myenv\Scripts\activate
-```
-
-**For Linux / macOS:**
-
-```bash
-source myenv/bin/activate
 ```
 
 ### Step 5: Install Django
@@ -83,19 +64,11 @@ source myenv/bin/activate
 python -m pip install django
 ```
 
-If a `requirements.txt` file is available, install the project dependencies using:
-
-```bash
-pip install -r requirements.txt
-```
-
 ### Step 6: Navigate to the Django project directory
 
 ```bash
 cd core
 ```
-
-Locate the directory containing `manage.py` and execute the following commands from that directory.
 
 ### Step 7: Apply database migrations
 
@@ -116,8 +89,6 @@ Open your web browser and visit:
 ```text
 http://127.0.0.1:8000/
 ```
-
-The application should now be accessible locally.
 
 ## Usage Examples
 
@@ -170,8 +141,6 @@ Receipe-Management-Application/
 ├── README.md
 └── myenv/
 ```
-
-Note: The internal structure of the `core` directory contains the Django application files, configuration, views, templates, and other project resources.
 
 ## Contribution Guidelines
 
@@ -230,14 +199,6 @@ git push origin feature/your-feature-name
 
 Your contribution will be submitted to the original repository for review.
 
-## License
-
-This project is maintained in the original repository by its contributors. Refer to the repository for applicable licensing information.
-
-## 👨Author
-
-Developed as a Recipe Management Application using Python and Django.
-
----
+-----------------------------------------------------------------------
 
 If you find this project useful, consider giving the repository a star!
